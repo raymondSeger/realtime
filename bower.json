@@ -1,0 +1,20 @@
+{
+  "name": "Real Time App",
+  "description": "Real Time App",
+  "main": "mainEntryPoint.js",
+  "authors": [
+    "Raymond Seger"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
