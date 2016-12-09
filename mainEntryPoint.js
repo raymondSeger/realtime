@@ -1,11 +1,13 @@
-var express         = require('express');
-var app             = express();
-var cors            = require('cors');
+var express     = require('express');
+var app         = express();
+var fs          = require('fs-extra');
 
-
-app.use( cors() );
 app.use( '/public', express.static( __dirname + '/public' ) );
 
+fs.mkdirs('/tmp/some/long/path/that/prob/doesnt/exist', function (err) {
+    if (err) return console.error(err);
+    console.log("success!");
+});
 
 
 
