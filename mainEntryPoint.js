@@ -29,9 +29,10 @@ app.get('/', function (req, res) {
         })
         .then(function(){
             console.log('d');
+            return 'e'
         })
-        .then(function () {
-            console.log('e');
+        .then(function (valueFromD) {
+            console.log(valueFromD);
         })
         .catch(function (error) {
             // Handle any error from all above steps
