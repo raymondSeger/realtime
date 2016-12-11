@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Example App</title>
 </head>
 <body>
@@ -21,11 +21,12 @@
 <!-- without this, socket IO cannot detect the user / send & receive data from socketIO server -->
 <script src="/socket.io/socket.io.js"></script>
 <script>
-  var socket = io.connect('http://localhost:3000/');
-  socket.on('news', function (data) {
+  var socket = io.connect('http://localhost:3000/my-namespace');
+  socket.on('hi', function (data) {
     console.log(data);
-    socket.emit('my other event', { my: 'data' });
   });
+
+  socket.emit('data_from_client', { 'hello': 'world' });
 </script>
 
 </body>

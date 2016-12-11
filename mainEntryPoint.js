@@ -13,12 +13,17 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 // socket IO
-io.on('connection', function (socket) {
-    socket.emit('news', { hello: 'world' });
-    socket.on('my other event', function (data) {
+var namespace_socket = io.of('/my-namespace');
+namespace_socket.on('connection', function(socket){
+    console.log('someone connected');
+
+    socket.on('data_from_client', function(data){
         console.log(data);
     });
+
 });
+
+namespace_socket.emit('hi', 'everyone!');
 
 /*
  * Middlewares
