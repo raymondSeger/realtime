@@ -1,10 +1,10 @@
 {
-  "name": "Real Time App",
+  "name": "RealTimeApp",
   "version": "1.0.0",
   "description": "Real Time App",
   "main": "mainEntryPoint.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Raymond Seger",
   "license": "ISC",
