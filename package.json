@@ -49,5 +49,8 @@
     "validator": "^6.2.0",
     "webpack": "^1.14.0",
     "webtorrent": "^0.98.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
